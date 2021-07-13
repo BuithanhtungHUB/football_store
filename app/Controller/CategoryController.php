@@ -27,7 +27,7 @@ class CategoryController
         } else {
             $this->uploadImage();
             $this->categoryModel->create($_REQUEST);
-            header('location:indexcategory.php');
+            header('location:category.php');
         }
     }
 
@@ -35,7 +35,7 @@ class CategoryController
     {
         $id = $_REQUEST['id'];
         $this->categoryModel->delete($id);
-        header('location:indexcategory.php');
+        header('location:category.php');
     }
 
     public function updateCategory()
@@ -49,7 +49,7 @@ class CategoryController
                 $this->uploadImage();
             }
             $this->categoryModel->update($_REQUEST);
-            header('location:indexcategory.php');
+            header('location:category.php');
         }
     }
 

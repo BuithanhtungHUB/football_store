@@ -16,7 +16,7 @@ class BrandController
 
     public function showAllBrand()
     {
-        $brands = $this->brandModel->getAll();
+        $brands = $this->brandModel->getAll();die();
         include_once  'app/View/backend/brand/list.php';
     }
 
@@ -27,7 +27,7 @@ class BrandController
         } else {
             $this->uploadImage();
             $this->brandModel->create($_REQUEST);
-            header('location:indexbrand.php');
+            header('location:brand.php');
         }
     }
 
@@ -35,7 +35,7 @@ class BrandController
     {
         $id = $_REQUEST['id'];
         $this->brandModel->delete($id);
-        header('location:indexbrand.php');
+        header('location:brand.php');
     }
 
     public function updateBrand()
@@ -49,7 +49,7 @@ class BrandController
                 $this->uploadImage();
             }
             $this->brandModel->update($_REQUEST);
-            header('location:indexbrand.php');
+            header('location:brand.php');
         }
     }
 

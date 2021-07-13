@@ -17,7 +17,11 @@ class ProductModel
     public function getAll()
     {
         try {
-            $sql = "SELECT * FROM `products`;";
+//            $sql = "SELECT * FROM `products`";
+            $sql = "SELECT products.id, products.name, products.url_image, products.sku, products.detail,
+                    categories.name AS category_id, brands.name AS brand_id, products.size, products.price 
+                    FROM `products` INNER JOIN categories ON products.category_id = categories.id 
+                            INNER JOIN brands ON products.brand_id = brands.id";
             $stmt = $this->dbConnect->connect()->query($sql);
             $stmt->execute();
             return $this->convertAllToObj($stmt->fetchAll());

@@ -26,7 +26,7 @@ class ProductController
         } else {
             $this->uploadImage();
             $this->productModel->create($_REQUEST);
-            header('location:indexproduct.php');
+            header('location:app/View/product.php');
         }
     }
 
@@ -34,7 +34,7 @@ class ProductController
     {
         $id = $_REQUEST['id'];
         $this->productModel->delete($id);
-        header('location:indexproduct.php');
+        header('location:product.php');
     }
 
     public function updateProduct()
@@ -48,7 +48,7 @@ class ProductController
                 $this->uploadImage();
             }
             $this->productModel->update($_REQUEST);
-            header('location:indexproduct.php');
+            header('location:product.php');
         }
     }
 
