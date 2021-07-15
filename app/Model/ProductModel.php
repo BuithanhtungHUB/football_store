@@ -110,6 +110,17 @@ class ProductModel
         }
     }
 
+    public function searchData($search)
+    {
+        try {
+            $sql = "SELECT * FROM `products` WHERE `name` LIKE " . "'%" . $search . "%" . "'; ";
+            $stmt = $this->dbConnect->connect()->query($sql);
+            $stmt->execute();
+            return $this->convertAllToObj($stmt->fetchAll());
+        } catch (\PDOException $exception) {
+            die($exception->getMessage());
+        }
+    }
     public function delete($id)
     {
         $sql = "DELETE FROM `products` WHERE `id` = $id";

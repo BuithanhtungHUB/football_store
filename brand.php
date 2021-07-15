@@ -5,6 +5,9 @@ use App\Controller;
 
 $dbconnect = new \App\Model\DBConnect();
 $controller = new Controller\BrandController();
+if (isset($_REQUEST['find'])){
+    $controller->search();
+}
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : null;
 
 

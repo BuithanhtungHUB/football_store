@@ -16,8 +16,15 @@ class BrandController
 
     public function showAllBrand()
     {
-        $brands = $this->brandModel->getAll();die();
+        $brands = $this->brandModel->getAll();
         include_once  'app/View/backend/brand/list.php';
+    }
+
+    public function search()
+    {
+        $search = $_REQUEST['search'];
+        $products = $this->brandModel->searchData($search);
+        include_once "app/View/backend/category/list.php";
     }
 
     public function createBrand()

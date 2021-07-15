@@ -67,6 +67,7 @@
                                         <option value="2">Nike</option>
                                         <option value="3">Puma</option>
                                         <option value="4">Kamito</option>
+                                        <option value="5">Wika</option>
                                     </select>
 <!--                                    <input type="number" class="form-control" id="brand" name="brand_id">-->
                                 </div>
@@ -86,6 +87,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-info">Submit</button>
+                            <button type="submit" class="btn btn-success"><a style="color:white" href="index.php">CANCEL</a> </button>
                             <hr>
 
                         </form>

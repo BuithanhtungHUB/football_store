@@ -50,6 +50,7 @@
                                 <input type="text" required class="form-control" id="detail" name="detail">
                             </div>
                             <button type="submit" class="btn btn-info">Submit</button>
+                            <button type="submit" class="btn btn-success"><a style="color:white" href="category.php">CANCEL</a> </button>
                             <hr>
 
                         </form>

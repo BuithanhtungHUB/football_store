@@ -27,6 +27,18 @@ class BrandModel
 
     }
 
+    public function searchData($search)
+    {
+        try {
+            $sql = "SELECT * FROM `brands` WHERE `name` LIKE " . "'%" . $search . "%" . "'; ";
+            $stmt = $this->dbConnect->connect()->query($sql);
+            $stmt->execute();
+            return $this->convertAllToObj($stmt->fetchAll());
+        } catch (\PDOException $exception) {
+            die($exception->getMessage());
+        }
+    }
+
     public function convertToObject($data)
     {
         $brand = new Brand($data['name'], $data['detail']);

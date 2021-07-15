@@ -13,6 +13,13 @@ class ProductController
     {
         $this->productModel = new ProductModel();
     }
+    public function search()
+    {
+        $search = $_REQUEST['search'];
+        $products = $this->productModel->searchData($search);
+        include_once "app/View/backend/product/list.php";
+    }
+
     public function showAllProduct()
     {
         $products = $this->productModel->getAll();
@@ -26,7 +33,7 @@ class ProductController
         } else {
             $this->uploadImage();
             $this->productModel->create($_REQUEST);
-            header('location:app/View/product.php');
+            header('location:product.php');
         }
     }
 

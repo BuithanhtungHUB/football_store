@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Product</title>
 
     <!-- Custom fonts for this template-->
     <link href="app/View/frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,7 +23,6 @@
 </head>
 
 <body id="page-top">
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -62,7 +61,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th scope="col">Id</th>
+<!--                        <th scope="col">Id</th>-->
                         <th scope="col">Product</th>
                         <th scope="col">Image</th>
                         <th scope="col">Sku</th>
@@ -92,7 +91,7 @@
                     <?php if (isset($products)) {
                         foreach ($products as $product) :?>
                             <tr>
-                                <th scope="row"><?php echo $product->getId() ?></th>
+<!--                                <th scope="row">--><?php //echo $product->getId() ?><!--</th>-->
                                 <td><?php echo $product->getName() ?></td>
                                 <td><img width="100px" height="100px" src="<?php echo $product->getUrlImage() ?>" alt=""></td>
                                 <td><?php echo $product->getSku() ?></td>
@@ -102,7 +101,7 @@
                                 <td><?php echo $product->getSize() ?></td>
                                 <td><?php echo $product->getPrice() ?></td>
                                 <td><a href="product.php?page=update-product&id=<?php echo $product->getId()?>" class="btn btn-warning btn-circle"><i class="fas fa-edit"></i></a></td>
-                                <td><a href="product.php?page=delete-product&id=<?php echo $product->getId()?>" class="btn btn-danger btn-circle"><i class="fas fa-trash"></i></a></td>
+                                <td><a href="product.php?page=delete-product&id=<?php echo $product->getId()?>"  class="btn btn-danger btn-circle"><i onclick="return confirm('Bạn có muốn xóa sản phẩm?')" class="fas fa-trash"></i></a></td>
                             </tr>
                         <?php endforeach;
                     } ?>

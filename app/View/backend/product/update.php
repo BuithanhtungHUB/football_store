@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        label for="size" class="form-label">Size</label>
+                                        <label for="size" class="form-label">Size</label>
                                         <input type="number" class="form-control" id="size" name="size" value="<?php echo $product->getSize()?>">
                                     </div>
                                     <div class="col-sm-6">
@@ -90,6 +90,7 @@
                                 </div>
                             <?php endif ?>
                             <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success"><a style="color:white" href="index.php">CANCEL</a> </button>
                             <hr>
 
                         </form>

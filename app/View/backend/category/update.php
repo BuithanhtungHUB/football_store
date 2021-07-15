@@ -53,6 +53,7 @@
                                 </div>
                             <?php endif ?>
                             <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success"><a style="color:white" href="category.php">CANCEL</a> </button>
                             <hr>
 
                         </form>

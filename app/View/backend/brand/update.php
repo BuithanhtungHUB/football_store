@@ -19,6 +19,7 @@
             </div>
         <?php endif ?>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success"><a style="color:white" href="brand.php">CANCEL</a> </button>
     </form>
 </div>
 <!DOCTYPE html>

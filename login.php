@@ -1,6 +1,15 @@
+<?php
+session_start();
+use App\Controller\UserController;
+require_once __DIR__ . '/vendor/autoload.php';
+if ($_SERVER['REQUEST_METHOD']=='POST'){
+    if ($_REQUEST[''])
+        $userController = new UserController();
+        $userController->loginUser();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="app/View/frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

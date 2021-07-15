@@ -20,6 +20,13 @@ class CategoryController
         include_once  'app/View/backend/category/list.php';
     }
 
+    public function search()
+    {
+        $search = $_REQUEST['search'];
+        $products = $this->categoryModel->searchData($search);
+        include_once "app/View/backend/category/list.php";
+    }
+
     public function createCategory()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
